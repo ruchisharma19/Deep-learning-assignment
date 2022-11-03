@@ -1,0 +1,72 @@
+For this part of the assignment, you’ll write a report on the performance of the deep learning model you created for AlphabetSoup.
+The report should contain the following:
+
+
+Overview:
+
+This model is made to select the applicants for funding with the best chance of success in their ventures. 
+
+
+Results:
+
+Data Preprocessing
+
+Target variable for the model:
+
+-IS_SUCCESSFUL column.
+
+Feature variables of the model are:
+
+-APPLICATION_TYPE—Alphabet Soup application type
+
+-AFFILIATION—Affiliated sector of industry
+
+-CLASSIFICATION—Government organization classification
+
+-ORGANIZATION—Organization type
+
+-USE_CASE—Use case for funding
+
+-STATUS—Active status
+
+-INCOME_AMT—Income classification
+
+-SPECIAL_CONSIDERATIONS—Special consideration for application
+
+-ASK_AMT—Funding amount requested
+
+-IS_SUCCESSFUL—Was the money used effectively
+
+
+Variable(s) removed from the input data because they are neither targets nor features:
+
+-EIN and NAME—Identification columns
+
+
+
+Compiling, Training, and Evaluating the Model:
+
+How many neurons, layers, and activation functions did you select for your neural network model:
+
+We put 80 and 30 neurons for the first and second hidden layer respectively. Relu and sigmoid activation functions were chosen for the hidden layer and output layers respectively.
+
+Though the model performance is 73% here and I tried to optimise the model through three attempts. The details are given below.
+
+
+ -First Attempt - optimising the model by removing two more columns from data on 50 more epochs and the performance is mentioned below.
+  
+                   Loss: 0.5758264064788818, Accuracy: 0.7272303104400
+
+ - Second Attempt - optimising the model by adding one more hidden layer with 10 neurons. The performance is mentioned below.
+                    
+                   Loss: 0.5778949856758118, Accuracy: 0.7229154706001282
+
+- Third Attempt - optimising the model removing 10 nodes from 1st and adding 40 nodes in second hidden layers. The performance is mentioned below.
+                  
+                  Loss: 0.578086256980896, Accuracy: 0.7197667360305786
+
+As we can see that adding hidden layers, more neurons to hidden layers, increasing epochs and removing some noise havent helped here to get 75% accuracy. However 73% accuracy for this dataset is quite okay.
+
+
+Summary: As we can see that adding hidden layers, more neurons to hidden layers, increasing epochs and removing some noise havent helped here to get 75% accuracy. However 73% accuracy for this dataset is quite okay. Logistic regression is a good algorithm for classification and since the output needs accuracy not much precision and other parameter, sp logistic regression can give us the accuracy with explainability. though random forest can be the second option too.
+
